@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
 <html>
 <head>
-<title>UCI Machine Learning Repository: Iris Data Set</title>
+<title>SubsurfaceML Repository: Oklahoma Production</title>
 
 <!-- Stylesheet link -->
 <link rel="stylesheet" type="text/css" href="../assets/ml.css" />
@@ -115,14 +115,14 @@ ALL Data Sets</b></font></a></span>
    <table><tr>
      <td valign=top>
     <p>
-    <span class="heading"><b>Frac Focus</b></span>
-    <br><span class="normal"><i><font size=4 >Download</font></i>: <a href="https://www.equinor.com/en/news/14jun2018-disclosing-volve-data.html"><font
+    <span class="heading"><b>Oklahoma Production Data</b></span>
+    <br><span class="normal"><i><font size=4 >Download</font></i>: <a href="ftp://ftp.occeweb.com/OG_DATA/historical.ZIP"><font
 style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a></span></p>
 
-    <p class="normal"><b>Abstract</b>: Contains daily production time-series data including downhole pressure, and temperature.
-        </br> Bore oil, gas and water production. Monthly time-series data includes oil, gas and water production.</p>
+    <p class="normal"><b>Abstract</b>: Contains daily production time-series data for Oklahoma UIC wells.
+        </br> Contains oil, gas and water production from 1987 to 2015.</p>
      <img
-src="../images/fracfocus.png"
+src="../images/oklahoma.png"
 hspace=20 vspace=10  /> </td>
    </table>
 
@@ -142,7 +142,7 @@ hspace=20 vspace=10  /> </td>
         <td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
         <td><p class="normal">10</p></td>
         <td bgcolor="#DDEEFF"><p class="normal"><b>Source</b></p></td>
-        <td><p class="normal">Ground Water Protection Council and IOGCS</p></td>      
+        <td><p class="normal">Oklahoma Corporation Commission</p></td>      
     </tr>
     <tr>
         <td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
@@ -150,7 +150,7 @@ hspace=20 vspace=10  /> </td>
         <td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
         <td><p class="normal">Yes</p></td>
         <td bgcolor="#DDEEFF"><p class="normal"><b>Date Released</b></p></td>
-        <td><p class="normal">2018-10-17</p></td>       
+        <td><p class="normal"></p></td>       
     </tr>
 </table>
 <br />
@@ -162,9 +162,22 @@ hspace=20 vspace=10  /> </td>
 <br />
 
 <p class="small-heading"><b>Getting the Data:</b></p>
-<pre><code class="python">
-    
+<pre><code class="python">import os
+import zipfile
 
+data_dir = '../data/historical/'
+
+# Python 2
+import urllib
+urllib.urlretrieve ('ftp://ftp.occ.state.ok.us/OG_DATA/historical.ZIP', 'data/historical.zip')
+
+# For Python 3, try:
+# import urllib.request 
+# urllib.request.urlretrieve(url, filename)
+
+zip_ref = zipfile.ZipFile('data/historical.zip', 'r')
+zip_ref.extractall(data_dir)
+zip_ref.close()
 </code></pre>
 
 <p class="small-heading"><b>Attribute Information:</b></p>

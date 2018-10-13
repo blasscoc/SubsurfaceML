@@ -1,0 +1,258 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>Poseidon: Pharos WL-Core Labeled</title>
+
+<!-- Stylesheet link -->
+<!-- <link rel="stylesheet" type="text/css" href="../assets/ml.css" /> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.0/build/styles/default.min.css">
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.0/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+	  <span class="normal"><a href="../index.html" alt="Home">
+	      <img src="../assets/Banner.png"
+		   border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Core Image</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">30</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Petrology</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Class Labels</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">4</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Donor</b></p></td>
+		<td><p class="normal">Conoco Phillips</p></td>		
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Deep Learning</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">no</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Released</b></p></td>
+		<td><p class="normal">2017-10-17</p></td>		
+	</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Pharos-1 White Light Core Image Labels</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a ""><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: A set of labeled training data for the Pharos-1 core images illuminted by white-light. <br/>
+	                                   This data would be suitble for training an image segmentation tool.</p>
+     <img
+<img src="../images/LabeledCoreNoPlugs.png", style="height:600px;">
+<img src="../images/LabeledCoreNoPlugs.png", style="height:600px;">
+<img src="../images/LabeledCoreNoPlugs.png", style="height:600px;">
+<img src="../images/LabeledCoreNoPlugs.png", style="height:600px;">
+<img src="../images/LabeledCoreNoPlugs.png", style="height:600px;">
+<img src="../images/LabeledCoreNoPlugs.png", style="height:600px;">
+</td>
+   </table>
+
+   
+<br />
+
+   <p class="small-heading"><b>Basic I/O</b></p>
+   <pre><code class="python">
+
+       from os import path 
+       from PIL import Image
+       from h5py import File as H5File
+       import numpy as np
+       import matplotlib.pylab as plt
+
+       # Define a special color map for Core Image facies.
+       import matplotlib.colors as colors
+       facies_colors = ['#FFFFFF', '#FF0800', '#50C878','#FADA5E', '#0080FF', 
+       '#FC0FC0', '#F9A602', '#A0A0AA', '#000000']
+       facies_names= ['N/A', 'Basement', 'Growth1', 'Prograde1', 'Prograde2', 'cont1', 'mtc', 'cont2']
+       cmap_facies = colors.ListedColormap(facies_colors[0:len(facies_colors)], 'indexed')
+
+       #DATAPATH = path.expanduser('...')       
+       label_data = path.join(DATAPATH, 'PHAROS-1_WL_1m_Core1_4963_00m_to_4964_00m.h5')
+       # The original datapath
+       core_image = path.join(DATAPATH, 'PHAROS-1_WL_1m_Core1_4963_00m_to_4964_00m.jpg')
+
+       with H5File(label_data) as fp:
+           labels = fp['WL_1m_Core1_4963_00m_to_4964_00m'][:]
+       # better as a numpy array
+       core_image = np.array(Image.open(core_image))
+
+       # QC everything lines up
+       plt.figure(figsize=(50,26))
+       plt.imshow(core_image)
+       plt.imshow(labels[:,:,0], alpha=0.5, cmap=cmap_facies, vmin=0, vmax=9)
+       plt.show()
+       
+   </code></pre>
+
+
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+   <p class="normal">This dataset contains a set of daily and monthly production data as timeseries. Included is a set of
+     oil, gas and water production, along with an ancillary suite of data including downhole pressure and temperature.
+    This data might have use for history matching reservoir models, also included in the greater volve dataset.</p>
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+   <p class="normal">   1. Daily/Monthly Oil Production m^3<br>
+                        2. Daily/Monthly Gas Production m^3<br>   </p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Fisher,R.A. "The use of multiple measurements in taxonomic problems" Annual Eugenics, 7, Part II, 179-188 (1936); also in "Contributions to Mathematical Statistics" (John Wiley, NY, 1950).<br><a href="http://rexa.info/paper/2fb499aa4d6a7071a6ba53c679ccca7055813114">[Web Link]</a><br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
